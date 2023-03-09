@@ -1,10 +1,10 @@
 // for yes and no buttons
 import React from "react";
 
-export default function Buttons(){
+export default function Buttons(props){
+    // console.log(text)
     return(
-        <div>
-            <button>Yes, I am</button>
-        </div>
+        
+            <button className="btn">{props.text}</button>
     )
 }
