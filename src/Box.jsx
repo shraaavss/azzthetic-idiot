@@ -7,8 +7,8 @@ export default function Box(){
         <div className="bigcontainer">
             <h1 className="question">Are you stupid? uwu</h1>
             <div className="answer">
-                <Buttons text="yes, I am"/>
-                <Buttons text="no, I'm not"/>
+                <Buttons text="yes, I am" id="pos"/>
+                <Buttons text="no, I'm not" id="neg"/>
             </div>
             
         </div>
