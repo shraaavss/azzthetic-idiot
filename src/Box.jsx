@@ -2,7 +2,7 @@
 import React from "react";
 import Buttons from "./Buttons";
 
-export default function Box(){
+export default function Box(props){
 
 const [isStupid, setIsStupid] = React.useState(false);
 
@@ -10,7 +10,7 @@ const [isStupid, setIsStupid] = React.useState(false);
     return(
         <div className="bigcontainer">
             <h1 className="question">{
-                isStupid?"It's okay, everyone is!":"Are you an idiot? uwu"
+                isStupid?"It's okay, everyone is! <3":`Are you an idiot, ${props.name}? uwu`
             }</h1>
             {!isStupid&&<div className="answer">
                 <Buttons text="yes, I am" onClick={()=> setIsStupid(true)} id="yes"/>

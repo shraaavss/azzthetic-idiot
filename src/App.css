@@ -12,6 +12,7 @@
     color: tomato;
     text-decoration-color: blueviolet;
     text-decoration-thickness: 4px;
+    text-align: center;
     font-size: 50px;
     font-style: italic;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -36,6 +37,22 @@
     background-color: bisque;
 }
 
-/* #no {
-    position: relative;
-} */
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    border: none;
+    border-bottom: solid 2px black;
+    font-size: x-large;
+    background-color: inherit;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input:focus{
+    outline: none;
+}
+
