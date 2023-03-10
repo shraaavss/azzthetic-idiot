@@ -2,20 +2,26 @@
 import React, {useState} from "react";
 // import Box from "./Box";
 
-export default function Buttons(props, props2){
-    const [count, setCount] = useState(0);
-    const button = document.getElementById("Clicky");
+export default function Buttons(props)
+{
+    const [pos, setPos] = useState({
+        bottom: "auto",
+        left: "auto"
+    })
 
-    function moveTheButton(e){
-        let x = e.clientX;
-        let y = e.clientY;
-        console.log("Coordinates: (" + x + "," + y + ")")
+    function moveTheButton(){
+        setPos({
+            left: 5*Math.floor((Math.random()*6)+1)+"vh",
+            bottom: 5*Math.floor((Math.random()*10)+1)+"vh"
+        })
+        console.log(pos)
+        
     }
     
     return(
-        
-            <button className="btn" id='Clicky' onClick={moveTheButton}>
-                {props.text}{props2.id}
+            <button className="btn" id={props.id} style={pos} onClick={props.id==="no"?(moveTheButton):props.onClick}>
+                {props.text}
             </button>
+            
     )
 }
